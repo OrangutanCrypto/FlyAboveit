@@ -1,0 +1,686 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FLYABOV Investor Deck</title>
+    <meta
+      name="description"
+      content="Investor deck for FLYABOV COREfx personal VTOL platform."
+    />
+    <link rel="icon" type="image/png" href="bitmap.png" />
+    <link rel="apple-touch-icon" href="bitmap.png" />
+    <meta name="theme-color" content="#0a1a2d" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700&family=Sora:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #081220;
+        --bg-alt: #0d1f35;
+        --panel: #112844;
+        --line: #27456a;
+        --text: #e6f0fb;
+        --muted: #b2c7de;
+        --accent: #2f86ff;
+        --accent-soft: #9dccff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Archivo", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 12% 8%, rgb(47 134 255 / 20%) 0%, rgb(47 134 255 / 0%) 40%),
+          linear-gradient(180deg, #07111d 0%, #081626 45%, #0a1a2d 100%);
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0 0 0.7rem;
+        font-family: "Sora", sans-serif;
+        line-height: 1.15;
+      }
+
+      p {
+        margin: 0 0 0.9rem;
+        color: var(--muted);
+      }
+
+      .wrap {
+        width: min(1120px, 92vw);
+        margin: 0 auto;
+      }
+
+      .top {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        backdrop-filter: blur(8px);
+        background: rgb(8 18 32 / 78%);
+        border-bottom: 1px solid rgb(157 204 255 / 20%);
+      }
+
+      .top .wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.9rem 0;
+        gap: 0.8rem;
+      }
+
+      .brand {
+        color: #ffffff;
+        text-decoration: none;
+        font-family: "Sora", sans-serif;
+        font-weight: 700;
+      }
+
+      .top-actions {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+      }
+
+      .deck-logo {
+        width: 46px;
+        height: auto;
+        filter: drop-shadow(0 4px 10px rgb(2 8 16 / 55%));
+      }
+
+      .back {
+        color: #dbebff;
+        text-decoration: none;
+        border: 1px solid rgb(157 204 255 / 35%);
+        border-radius: 8px;
+        padding: 0.55rem 0.8rem;
+        font-size: 0.92rem;
+      }
+
+      .slide {
+        min-height: 84vh;
+        display: grid;
+        align-items: center;
+        padding: clamp(3rem, 8vw, 6rem) 0;
+        border-bottom: 1px solid rgb(157 204 255 / 14%);
+      }
+
+      .kicker {
+        color: var(--accent-soft);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-size: 0.82rem;
+        font-weight: 700;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 1rem;
+        align-items: center;
+      }
+
+      .hero-grid h1 {
+        font-size: clamp(2rem, 5vw, 3.8rem);
+        max-width: 14ch;
+      }
+
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.85rem;
+        margin-top: 1rem;
+      }
+
+      .card {
+        background: rgb(17 40 68 / 72%);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 1rem;
+      }
+
+      .card h3 {
+        font-size: 1.04rem;
+      }
+
+      .card p {
+        margin: 0;
+        font-size: 0.98rem;
+      }
+
+      .media {
+        width: 100%;
+        aspect-ratio: 16 / 10;
+        border-radius: 8px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+      }
+
+      .media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .metrics {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.85rem;
+        margin-top: 1rem;
+      }
+
+      .metric {
+        border-radius: 8px;
+        border: 1px solid var(--line);
+        background: rgb(17 40 68 / 62%);
+        padding: 1rem;
+      }
+
+      .metric .v {
+        display: block;
+        font-family: "Sora", sans-serif;
+        font-size: 1.25rem;
+        color: #ffffff;
+        margin-bottom: 0.2rem;
+      }
+
+      .dual {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.85rem;
+      }
+
+      .mode {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: rgb(8 24 44 / 72%);
+        padding: 1rem;
+      }
+
+      .mode h3 {
+        color: #d2e7ff;
+      }
+
+      .mode strong {
+        color: #ffffff;
+      }
+
+      .ask {
+        border: 1px solid rgb(157 204 255 / 40%);
+        border-radius: 8px;
+        background: rgb(15 37 63 / 68%);
+        padding: 1.1rem;
+      }
+
+      .ask p:last-child {
+        margin-bottom: 0;
+      }
+
+      .two-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.85rem;
+        align-items: start;
+      }
+
+      .ecosystem-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.85rem;
+        margin-top: 1rem;
+      }
+
+      .chip {
+        display: inline-block;
+        margin-top: 0.4rem;
+        padding: 0.28rem 0.5rem;
+        border: 1px solid rgb(157 204 255 / 36%);
+        border-radius: 999px;
+        color: #d9eaff;
+        font-size: 0.78rem;
+      }
+
+      .chart-card {
+        background: rgb(11 30 51 / 76%);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 1rem;
+      }
+
+      .chart-card h3 {
+        font-size: 1.02rem;
+      }
+
+      .chart-card p {
+        margin-bottom: 0.45rem;
+        font-size: 0.9rem;
+      }
+
+      .chart {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        border: 1px solid rgb(157 204 255 / 18%);
+        background: rgb(7 20 36 / 72%);
+      }
+
+      .chart-note {
+        font-size: 0.8rem;
+        color: #9fb4cc;
+        margin-top: 0.45rem;
+      }
+
+      .table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      .table th,
+      .table td {
+        text-align: left;
+        padding: 0.6rem;
+        border-bottom: 1px solid rgb(157 204 255 / 18%);
+        font-size: 0.92rem;
+      }
+
+      .table th {
+        color: #deecfb;
+        font-weight: 600;
+      }
+
+      @media (max-width: 900px) {
+        .hero-grid,
+        .dual,
+        .card-grid,
+        .metrics,
+        .two-col,
+        .ecosystem-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .deck-logo {
+          width: 38px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="top">
+      <div class="wrap">
+        <a class="brand" href="investor-deck.html">FLYABOV INVESTOR DECK</a>
+        <div class="top-actions">
+          <img class="deck-logo" src="bitmap.png" alt="ABOV logo" />
+          <a class="back" href="index.html">Back To Landing Page</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="slide">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="kicker">Slide 1 | Vision</p>
+          <h1>Affordable personal VTOL with mission-ready flexibility.</h1>
+          <p>
+            FLYABOV is building a practical electric manned drone platform powered by COREfx
+            dual-mode propulsion for utility, rescue, and recreational deployment.
+          </p>
+          <p>
+            Market position: today we execute in Rural Air Mobility (RAM) for off-road and rural
+            operations. We plan to enter Urban Air Mobility (UAM) air taxi markets as regulation
+            becomes clearer.
+          </p>
+          <div class="metrics">
+            <div class="metric">
+              <span class="v">20 min</span>
+              Target Flight Time
+            </div>
+            <div class="metric">
+              <span class="v">1 + Cargo</span>
+              235 lb Payload
+            </div>
+            <div class="metric">
+              <span class="v">0</span>
+              In-flight Emissions
+            </div>
+          </div>
+        </div>
+        <div class="media">
+          <img
+            src="matela%20image/front%20portriate%20logos%201920p.png"
+            alt="FLYABOV front concept render"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="wrap">
+        <p class="kicker">Slide 2 | Problem</p>
+        <h2>Current options force a tradeoff between accessibility and capability.</h2>
+        <div class="card-grid">
+          <article class="card">
+            <h3>High Cost Barrier</h3>
+            <p>Most manned aerial platforms are priced beyond personal and small-team adoption.</p>
+          </article>
+          <article class="card">
+            <h3>Mission Rigidity</h3>
+            <p>Single-mode systems are less adaptable across open-air and close-quarters tasks.</p>
+          </article>
+          <article class="card">
+            <h3>Limited Field Utility</h3>
+            <p>Many platforms are optimized for demos, not real utility and rescue workflows.</p>
+          </article>
+          <article class="card">
+            <h3>Complex Ownership</h3>
+            <p>Operators need compact, configurable aircraft with clearer operating boundaries.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="wrap">
+        <p class="kicker">Slide 3 | Product</p>
+        <h2>COREfx dual-mode propulsion defines the platform.</h2>
+        <div class="dual">
+          <article class="mode">
+            <h3>Exposed Propeller Mode</h3>
+            <p>
+              <strong>Best for:</strong> open-air operation and responsive handling in non-confined
+              environments.
+            </p>
+            <p>
+              <strong>Constraint:</strong> not intended for close-quarters operation.
+            </p>
+          </article>
+          <article class="mode">
+            <h3>Electric Ducted Fan (EDF) Mode</h3>
+            <p>
+              <strong>Best for:</strong> close-quarters maneuvering and controlled enclosed-thrust
+              flight.
+            </p>
+            <p>
+              <strong>Value:</strong> mission adaptability across utility, rescue, and recreation.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="wrap">
+        <p class="kicker">Slide 4 | Use Cases</p>
+        <h2>Three immediate deployment categories.</h2>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Utility</h3>
+            <p>Site access, light transport, and configurable unmanned air-crane support.</p>
+          </article>
+          <article class="card">
+            <h3>Rescue</h3>
+            <p>Rapid-response support, remote reach, and emergency coordination missions.</p>
+          </article>
+          <article class="card">
+            <h3>Recreation</h3>
+            <p>Personal flight for trained enthusiasts and controlled adventure use.</p>
+          </article>
+          <article class="card">
+            <h3>Market Path</h3>
+            <p>RAM first in off-road and rural markets, then UAM air taxi entry in future phases.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="wrap">
+        <p class="kicker">Slide 5 | Digital Ecosystem</p>
+        <h2>Flight-control fleet of connected digital products.</h2>
+        <div class="ecosystem-grid">
+          <article class="card">
+            <h3>ABOV Pilot App</h3>
+            <p>Mission setup, pre-flight checklists, telemetry visibility, and post-flight logs.</p>
+            <span class="chip">Mobile + Tablet</span>
+          </article>
+          <article class="card">
+            <h3>FleetOps Control</h3>
+            <p>Fleet health, component lifecycle tracking, and operator readiness workflow.</p>
+            <span class="chip">Web Command Layer</span>
+          </article>
+          <article class="card">
+            <h3>Rescue AI Copilot</h3>
+            <p>AI exposure through route risk scoring, anomaly detection, and scenario assist.</p>
+            <span class="chip">AI-Enabled Stack</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="wrap">
+        <p class="kicker">Slide 6 | Market Growth</p>
+        <h2>Market expansion supports RAM now and UAM later.</h2>
+        <p>
+          Near-term execution is RAM where operational constraints are clearer. UAM air taxi
+          expansion is a future growth vector once certification and city-level regulation are more
+          defined.
+        </p>
+        <div class="two-col">
+          <article class="chart-card">
+            <h3>Personal eVTOL Market (Illustrative)</h3>
+            <p>Projected TAM growth with accelerating adoption through 2030.</p>
+            <svg class="chart" viewBox="0 0 520 280" aria-label="TAM growth chart">
+              <rect x="0" y="0" width="520" height="280" fill="#0b1f36"></rect>
+              <g stroke="#2a4566" stroke-width="1">
+                <line x1="50" y1="230" x2="490" y2="230"></line>
+                <line x1="50" y1="190" x2="490" y2="190"></line>
+                <line x1="50" y1="150" x2="490" y2="150"></line>
+                <line x1="50" y1="110" x2="490" y2="110"></line>
+                <line x1="50" y1="70" x2="490" y2="70"></line>
+              </g>
+              <g fill="#9fb4cc" font-size="12">
+                <text x="32" y="234">$0</text>
+                <text x="24" y="194">$2B</text>
+                <text x="24" y="154">$4B</text>
+                <text x="24" y="114">$6B</text>
+                <text x="24" y="74">$8B</text>
+                <text x="56" y="250">2026</text>
+                <text x="141" y="250">2027</text>
+                <text x="226" y="250">2028</text>
+                <text x="311" y="250">2029</text>
+                <text x="396" y="250">2030</text>
+              </g>
+              <polyline
+                fill="none"
+                stroke="#2f86ff"
+                stroke-width="4"
+                points="60,220 145,205 230,178 315,140 400,92"
+              ></polyline>
+              <g fill="#8fc3ff">
+                <circle cx="60" cy="220" r="5"></circle>
+                <circle cx="145" cy="205" r="5"></circle>
+                <circle cx="230" cy="178" r="5"></circle>
+                <circle cx="315" cy="140" r="5"></circle>
+                <circle cx="400" cy="92" r="5"></circle>
+              </g>
+            </svg>
+            <p class="chart-note">Illustrative investor model for deck storytelling.</p>
+          </article>
+          <article class="chart-card">
+            <h3>Software Attach Rate</h3>
+            <p>Share of aircraft customers also using ABOV software products.</p>
+            <svg class="chart" viewBox="0 0 520 280" aria-label="Attach rate bars">
+              <rect x="0" y="0" width="520" height="280" fill="#0b1f36"></rect>
+              <g stroke="#2a4566" stroke-width="1">
+                <line x1="50" y1="230" x2="490" y2="230"></line>
+                <line x1="50" y1="180" x2="490" y2="180"></line>
+                <line x1="50" y1="130" x2="490" y2="130"></line>
+                <line x1="50" y1="80" x2="490" y2="80"></line>
+              </g>
+              <g fill="#9fb4cc" font-size="12">
+                <text x="20" y="234">0%</text>
+                <text x="14" y="184">25%</text>
+                <text x="14" y="134">50%</text>
+                <text x="14" y="84">75%</text>
+              </g>
+              <rect x="95" y="150" width="60" height="80" fill="#2f86ff"></rect>
+              <rect x="205" y="125" width="60" height="105" fill="#2f86ff"></rect>
+              <rect x="315" y="100" width="60" height="130" fill="#2f86ff"></rect>
+              <rect x="425" y="78" width="60" height="152" fill="#2f86ff"></rect>
+              <g fill="#c7ddf4" font-size="12">
+                <text x="100" y="248">2027</text>
+                <text x="210" y="248">2028</text>
+                <text x="320" y="248">2029</text>
+                <text x="430" y="248">2030</text>
+              </g>
+            </svg>
+            <p class="chart-note">Illustrative path: 40% to 76% software attach.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="wrap">
+        <p class="kicker">Slide 7 | Treasury Strategy</p>
+        <h2>Balance sheet framework includes Bitcoin treasury exposure.</h2>
+        <div class="two-col">
+          <article class="card">
+            <h3>Capital Allocation Model</h3>
+            <p>
+              ABOV maintains operating cash and allocates a strategic portion of treasury reserves
+              to Bitcoin on the balance sheet.
+            </p>
+            <table class="table" aria-label="Treasury allocation table">
+              <thead>
+                <tr>
+                  <th>Bucket</th>
+                  <th>Target Share</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Operating Cash</td>
+                  <td>70%</td>
+                </tr>
+                <tr>
+                  <td>Bitcoin Treasury</td>
+                  <td>15%</td>
+                </tr>
+                <tr>
+                  <td>Strategic Reserves</td>
+                  <td>15%</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+          <article class="chart-card">
+            <h3>Treasury Composition</h3>
+            <p>Illustrative blend designed for growth exposure and liquidity discipline.</p>
+            <svg class="chart" viewBox="0 0 520 280" aria-label="Treasury composition">
+              <rect x="0" y="0" width="520" height="280" fill="#0b1f36"></rect>
+              <rect x="60" y="110" width="280" height="50" fill="#224870"></rect>
+              <rect x="340" y="110" width="60" height="50" fill="#2f86ff"></rect>
+              <rect x="400" y="110" width="60" height="50" fill="#5aa3ff"></rect>
+              <g fill="#dbeaf8" font-size="13">
+                <text x="65" y="103">Operating Cash</text>
+                <text x="344" y="103">BTC</text>
+                <text x="405" y="103">Reserves</text>
+                <text x="160" y="141">70%</text>
+                <text x="360" y="141">15%</text>
+                <text x="420" y="141">15%</text>
+              </g>
+            </svg>
+            <p class="chart-note">Subject to board policy, risk limits, and jurisdiction rules.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="wrap">
+        <p class="kicker">Slide 8 | Commercial Model</p>
+        <h2>Revenue built around hardware plus support.</h2>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Core Sales</h3>
+            <p>Manned quad-copter kit platform with configurable propulsion architecture.</p>
+          </article>
+          <article class="card">
+            <h3>Upgrades</h3>
+            <p>Mode-specific components, replacement parts, and mission package add-ons.</p>
+          </article>
+          <article class="card">
+            <h3>Partner Channels</h3>
+            <p>Wholesale relationships with high-value application-specific customers.</p>
+          </article>
+          <article class="card">
+            <h3>Support & Training</h3>
+            <p>Technical onboarding and safety-centered operator support model.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="wrap">
+        <p class="kicker">Slide 9 | Milestones</p>
+        <h2>Execution priorities</h2>
+        <div class="card-grid">
+          <article class="card">
+            <h3>2026</h3>
+            <p>Expand flight envelope and complete controlled mode-transition validation.</p>
+          </article>
+          <article class="card">
+            <h3>2027</h3>
+            <p>Field testing for utility/rescue scenarios and partner pilot programs.</p>
+          </article>
+          <article class="card">
+            <h3>2028</h3>
+            <p>Scaled deployment through pre-order fulfillment and wholesale channels.</p>
+          </article>
+          <article class="card">
+            <h3>Ongoing</h3>
+            <p>Safety, policy compliance, and privacy/security controls for all stakeholders.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="wrap">
+        <p class="kicker">Slide 10 | Capital Raise</p>
+        <h2>Investor engagement</h2>
+        <div class="ask">
+          <p>
+            FLYABOV is engaging investors and strategic partners to accelerate prototype
+            optimization, validation, and launch-market readiness.
+          </p>
+          <p>
+            Current focus: engineering execution, safety test progression, and distribution partner
+            expansion.
+          </p>
+          <p>
+            Contact through the landing page form to request detailed financials and diligence
+            materials.
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

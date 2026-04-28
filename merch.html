@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FLYABOV Merch</title>
+    <meta
+      name="description"
+      content="Official ABOV merch: t-shirts, coffee cups, mousepads, and more."
+    />
+    <link rel="icon" type="image/png" href="bitmap.png" />
+    <link rel="apple-touch-icon" href="bitmap.png" />
+    <meta name="theme-color" content="#0a1a2d" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700&family=Sora:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="merch.css" />
+  </head>
+  <body>
+    <header class="top">
+      <div class="container nav">
+        <a class="brand" href="index.html">FLYABOV</a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="investor-deck.html">Investor Deck</a>
+          <a href="merch.html" aria-current="page">Merch</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-overlay"></div>
+        <img class="hero-mark" src="bitmap.png" alt="ABOV logo" />
+        <div class="container hero-inner">
+          <p class="kicker">Official Store</p>
+          <h1>ABOV Flight Merch</h1>
+          <p>
+            Apparel, drinkware, desk gear, and accessories built around the ABOV flight identity.
+            Preview collection items below and reserve early releases.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#products">Shop Collection</a>
+            <a class="btn btn-secondary" href="#bundles">View Bundles</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="products">
+        <div class="container">
+          <div class="section-head">
+            <p class="kicker">Products</p>
+            <h2>Core Merch Line</h2>
+          </div>
+
+          <div class="checkout-panel">
+            <div>
+              <p class="kicker">Checkout Provider</p>
+              <p class="checkout-note">
+                Active provider:
+                <strong data-provider-label>Wix</strong>
+              </p>
+            </div>
+            <div class="provider-group" role="tablist" aria-label="Checkout provider">
+              <button class="provider-btn active" data-provider="wix" type="button">Wix</button>
+              <button class="provider-btn" data-provider="stripe" type="button">Stripe</button>
+              <button class="provider-btn" data-provider="shopify" type="button">Shopify</button>
+            </div>
+          </div>
+
+          <div class="filters" role="tablist" aria-label="Product filters">
+            <button class="filter active" data-filter="all" type="button">All</button>
+            <button class="filter" data-filter="apparel" type="button">Apparel</button>
+            <button class="filter" data-filter="drinkware" type="button">Drinkware</button>
+            <button class="filter" data-filter="desk" type="button">Desk</button>
+            <button class="filter" data-filter="accessories" type="button">Accessories</button>
+          </div>
+
+          <div class="grid">
+            <article class="card" data-category="apparel">
+              <div class="media">
+                <img
+                  src="matela%20image/front%20portriate%20logos%201920p.png"
+                  alt="ABOV COREfx T-shirt mockup"
+                  loading="lazy"
+                />
+                <img class="badge" src="bitmap.png" alt="" />
+              </div>
+              <div class="content">
+                <p class="tag">Apparel</p>
+                <h3>COREfx Flight Tee</h3>
+                <p>Soft cotton tee with front ABOV emblem and rear flight-line print.</p>
+                <p class="price">$39</p>
+                <button type="button" class="btn btn-small reserve-btn" data-product="corefx-flight-tee">Reserve</button>
+              </div>
+            </article>
+
+            <article class="card" data-category="apparel">
+              <div class="media">
+                <img
+                  src="matela%20image/front%20on%20portriate%20logos%20100sample%20full%20rez.png"
+                  alt="ABOV pilot hoodie mockup"
+                  loading="lazy"
+                />
+                <img class="badge" src="bitmap.png" alt="" />
+              </div>
+              <div class="content">
+                <p class="tag">Apparel</p>
+                <h3>Pilot Ops Hoodie</h3>
+                <p>Heavyweight fleece hoodie with embroidered blue logo chest patch.</p>
+                <p class="price">$69</p>
+                <button type="button" class="btn btn-small reserve-btn" data-product="pilot-ops-hoodie">Reserve</button>
+              </div>
+            </article>
+
+            <article class="card" data-category="drinkware">
+              <div class="media">
+                <img
+                  src="matela%20image/summer%2025.png"
+                  alt="ABOV coffee cup mockup"
+                  loading="lazy"
+                />
+                <img class="badge" src="bitmap.png" alt="" />
+              </div>
+              <div class="content">
+                <p class="tag">Drinkware</p>
+                <h3>ABOV Coffee Cup</h3>
+                <p>Ceramic cup featuring the bitmap logo and COREfx side mark.</p>
+                <p class="price">$24</p>
+                <button type="button" class="btn btn-small reserve-btn" data-product="abov-coffee-cup">Reserve</button>
+              </div>
+            </article>
+
+            <article class="card" data-category="drinkware">
+              <div class="media">
+                <img
+                  src="matela%20image/stern%20ortho%20chrome%20render%20tran.png"
+                  alt="ABOV insulated travel mug mockup"
+                  loading="lazy"
+                />
+                <img class="badge" src="bitmap.png" alt="" />
+              </div>
+              <div class="content">
+                <p class="tag">Drinkware</p>
+                <h3>Flight-Line Travel Mug</h3>
+                <p>Insulated steel mug with ABOV crest and textured anti-slip grip.</p>
+                <p class="price">$34</p>
+                <button type="button" class="btn btn-small reserve-btn" data-product="flight-line-travel-mug">Reserve</button>
+              </div>
+            </article>
+
+            <article class="card" data-category="desk">
+              <div class="media">
+                <img
+                  src="matela%20image/Side%20on%20portriate%20100sample%20full%20rez.png"
+                  alt="ABOV mousepad mockup"
+                  loading="lazy"
+                />
+                <img class="badge" src="bitmap.png" alt="" />
+              </div>
+              <div class="content">
+                <p class="tag">Desk</p>
+                <h3>Precision Mousepad</h3>
+                <p>Low-friction gaming and work pad with stitched edge and logo print.</p>
+                <p class="price">$22</p>
+                <button type="button" class="btn btn-small reserve-btn" data-product="precision-mousepad">Reserve</button>
+              </div>
+            </article>
+
+            <article class="card" data-category="desk">
+              <div class="media">
+                <img
+                  src="matela%20image/down%20tilt%20stearn%20portriate%20100sample%20full%20rez.png"
+                  alt="ABOV desk mat mockup"
+                  loading="lazy"
+                />
+                <img class="badge" src="bitmap.png" alt="" />
+              </div>
+              <div class="content">
+                <p class="tag">Desk</p>
+                <h3>Cockpit Desk Mat</h3>
+                <p>Extended desk mat with RAM/UAM route graphic and logo lockup.</p>
+                <p class="price">$38</p>
+                <button type="button" class="btn btn-small reserve-btn" data-product="cockpit-desk-mat">Reserve</button>
+              </div>
+            </article>
+
+            <article class="card" data-category="accessories">
+              <div class="media">
+                <img
+                  src="matela%20image/flight%20shot%20stert.png"
+                  alt="ABOV sticker pack mockup"
+                  loading="lazy"
+                />
+                <img class="badge" src="bitmap.png" alt="" />
+              </div>
+              <div class="content">
+                <p class="tag">Accessories</p>
+                <h3>ABOV Sticker Pack</h3>
+                <p>Weatherproof logo and aircraft stickers for laptops, helmets, and cases.</p>
+                <p class="price">$14</p>
+                <button type="button" class="btn btn-small reserve-btn" data-product="abov-sticker-pack">Reserve</button>
+              </div>
+            </article>
+
+            <article class="card" data-category="accessories">
+              <div class="media">
+                <img
+                  src="matela%20image/front%20portriate%20logos%20100sample%20full%20rez.png"
+                  alt="ABOV tote bag mockup"
+                  loading="lazy"
+                />
+                <img class="badge" src="bitmap.png" alt="" />
+              </div>
+              <div class="content">
+                <p class="tag">Accessories</p>
+                <h3>Field Utility Tote</h3>
+                <p>Heavy canvas tote for daily gear with reinforced straps and logo print.</p>
+                <p class="price">$29</p>
+                <button type="button" class="btn btn-small reserve-btn" data-product="field-utility-tote">Reserve</button>
+              </div>
+            </article>
+
+            <article class="card" data-category="apparel">
+              <div class="media">
+                <img
+                  src="matela%20image/stern%20ortho%20chrome%20render%20tran.png"
+                  alt="ABOV cap mockup"
+                  loading="lazy"
+                />
+                <img class="badge" src="bitmap.png" alt="" />
+              </div>
+              <div class="content">
+                <p class="tag">Apparel</p>
+                <h3>Blueprint Flight Cap</h3>
+                <p>Structured cap with tonal stitching and front bitmap emblem.</p>
+                <p class="price">$32</p>
+                <button type="button" class="btn btn-small reserve-btn" data-product="blueprint-flight-cap">Reserve</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="bundles">
+        <div class="container bundles">
+          <div class="bundle">
+            <p class="kicker">Bundle</p>
+            <h3>Pilot Starter Pack</h3>
+            <p>Tee + cap + mug + sticker pack.</p>
+            <p class="price">$95</p>
+            <button type="button" class="btn btn-small reserve-btn" data-product="pilot-starter-pack">Reserve</button>
+          </div>
+          <div class="bundle">
+            <p class="kicker">Bundle</p>
+            <h3>Desk Command Kit</h3>
+            <p>Mousepad + desk mat + mug + logo stickers.</p>
+            <p class="price">$79</p>
+            <button type="button" class="btn btn-small reserve-btn" data-product="desk-command-kit">Reserve</button>
+          </div>
+          <div class="bundle">
+            <p class="kicker">Bundle</p>
+            <h3>Field Ops Set</h3>
+            <p>Hoodie + tote + travel mug + cap.</p>
+            <p class="price">$149</p>
+            <button type="button" class="btn btn-small reserve-btn" data-product="field-ops-set">Reserve</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <img src="bitmap.png" alt="ABOV logo" />
+      <p>FLYABOV Merch | Preview Collection</p>
+    </footer>
+
+    <div class="preview-modal" id="productPreview" hidden>
+      <div class="preview-backdrop" data-close-preview></div>
+      <div class="preview-dialog" role="dialog" aria-modal="true" aria-label="Product image preview">
+        <button class="preview-close" type="button" aria-label="Close preview" data-close-preview>
+          Close
+        </button>
+        <img id="previewImage" src="" alt="" />
+        <div class="mockup-controls">
+          <div class="mockup-control">
+            <p>Shirt Style</p>
+            <div class="variant-group" role="tablist" aria-label="Shirt style">
+              <button class="variant-btn active" data-shirt-variant="crew" type="button">Crew Neck</button>
+              <button class="variant-btn" data-shirt-variant="vneck" type="button">V-Neck</button>
+              <button class="variant-btn" data-shirt-variant="oversized" type="button">Oversized</button>
+              <button class="variant-btn" data-shirt-variant="hoodie" type="button">Hoodie</button>
+            </div>
+          </div>
+          <div class="mockup-control">
+            <p>Mug Type</p>
+            <div class="variant-group" role="tablist" aria-label="Mug type">
+              <button class="variant-btn active" data-mug-type="ceramic" type="button">Ceramic</button>
+              <button class="variant-btn" data-mug-type="tumbler" type="button">Tumbler</button>
+            </div>
+          </div>
+        </div>
+        <div class="mockup-grid">
+          <figure class="mockup-card">
+            <div class="tshirt-shell tshirt-crew" aria-hidden="true">
+              <div class="tshirt-collar"></div>
+              <div class="tshirt-neck"></div>
+              <div class="mockup-tshirt-print"></div>
+            </div>
+            <figcaption>T-Shirt Preview</figcaption>
+          </figure>
+          <figure class="mockup-card">
+            <div class="mug-shell mug-ceramic" aria-hidden="true">
+              <div class="mug-rim"></div>
+              <div class="mockup-mug-print"></div>
+              <div class="mug-handle"></div>
+              <div class="mug-base-shadow"></div>
+            </div>
+            <figcaption>Mug Preview</figcaption>
+          </figure>
+        </div>
+        <p id="previewTitle"></p>
+      </div>
+    </div>
+
+    <script src="checkout-config.js"></script>
+    <script src="merch.js"></script>
+  </body>
+</html>
